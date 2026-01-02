@@ -1,0 +1,13 @@
+docker build -t nodeApp:1.0
+docker images -a
+docker -d -p 808:808 --rm 3f
+docker ps -a
+docker ps -a --format {{.Names}}
+docker run -d -p 3000:808 --rm --name nodeApp_1.0 nodeApp:1.0
+docker run -it node #interactive mode
+docker stop nodeApp_1.0
+docker cp nodeApp_1.0:/app test
+docker cp dummy/. nodeApp_1.0:/test
+docker inspect nodeApp:1.0
+docker rmi nodeApp:1.0
+

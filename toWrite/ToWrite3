@@ -1,0 +1,12 @@
+docker image prune #remove not used images 
+docker image prune -a
+docker start -ai nodeApp_1.0
+docker start -a nodeApp_1.0
+docker logs -f nodeApp_1.0
+docker logs nodeApp_1.0
+docker attach nodeApp_1.0
+docker login
+docker tag node-app:1.0 azzaoui45/alae-projects:node-app-1.0
+docker push azzaoui45/alae-projects:node-app-1.0
+docker run -p 300:808 --rm --name nodeServ azzaoui45/alae-projects:node-app-1.0
+docker pull azzaoui45/alae-projects:node-app-1.0

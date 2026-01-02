@@ -1,0 +1,8 @@
+docker inspect imageName
+docker container inspect containerName
+docker network
+docker network create db
+docker network create movies-net
+docker network rm db
+docker network ls
+docker run --name mongodb --rm --network movies-net

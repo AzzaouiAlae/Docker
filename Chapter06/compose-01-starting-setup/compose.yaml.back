@@ -1,0 +1,39 @@
+services:
+  mongodb:
+    image: 'mongo'
+    volumes:
+      - mongodb:/data/db
+    env_file:
+      - env/mongodb.env
+    container_name: goal-app-db
+  backend:
+    build: ./backend
+    env_file:
+      - env/backend.env
+    volumes:
+      - ./backend:/app:ro
+      - backend-logs:/app/logs
+      - /app/node_modules
+    ports:
+      - 80:80
+    container_name: goal-app-backend
+    depends_on:
+      - mongodb
+
+  frontend:
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend/src:/app/src:ro
+    ports:
+      - 3000:3000
+    container_name: goal-app-frontend
+    depends_on:
+      - backend
+    stdin_open: true
+    tty: true
+
+volumes:
+  mongodb:
+  backend-logs:

@@ -1,0 +1,13 @@
+docker volume ls
+docker volume create feedback-app2
+docker volume inspect feedback-app2
+docker volume rm feedback-app3
+docker volume prune
+docker volume prune -a
+docker run --rm --name feedback-app -d -p 300:80 -v /app/feedback feedback-app
+docker run -d -p 300:80 --rm  -v feedback:/app/feedback --rm --name feedback-app feedback-app:1.3
+docker run --rm --name feedback-app -p 300:80 -v `pwd`:/app -v /app/node_modules feedback-app
+.dockerignore
+docker run -e PORT=800 -p 301:800 --name feedback-app -v /app/temp -v feedback:/app/feedback -v /app/node_modules -v `pwd`:/app/:ro --rm -d feedback-app:env2
+docker run --env-file ./.env
+docker build --build-arg DEFAULT_PORT=800 .

@@ -1,0 +1,14 @@
+/app/HelloFromDocker/bin/Debug/net10.0/HelloFromDocker
+/app/HelloFromDocker/bin/Debug/net10.0/HelloFromDocker.deps.json
+/app/HelloFromDocker/bin/Debug/net10.0/HelloFromDocker.runtimeconfig.json
+/app/HelloFromDocker/bin/Debug/net10.0/HelloFromDocker.dll
+/app/HelloFromDocker/bin/Debug/net10.0/HelloFromDocker.pdb
+/app/HelloFromDocker/obj/Debug/net10.0/HelloFromDocker.GeneratedMSBuildEditorConfig.editorconfig
+/app/HelloFromDocker/obj/Debug/net10.0/HelloFromDocker.AssemblyInfoInputs.cache
+/app/HelloFromDocker/obj/Debug/net10.0/HelloFromDocker.AssemblyInfo.cs
+/app/HelloFromDocker/obj/Debug/net10.0/HelloFromDocker.csproj.CoreCompileInputs.cache
+/app/HelloFromDocker/obj/Debug/net10.0/HelloFromDocker.dll
+/app/HelloFromDocker/obj/Debug/net10.0/refint/HelloFromDocker.dll
+/app/HelloFromDocker/obj/Debug/net10.0/HelloFromDocker.pdb
+/app/HelloFromDocker/obj/Debug/net10.0/HelloFromDocker.genruntimeconfig.cache
+/app/HelloFromDocker/obj/Debug/net10.0/ref/HelloFromDocker.dll
